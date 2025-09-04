@@ -8,20 +8,18 @@ LIMIT.
 - STOP file acts as a kill-switch (replication halted if present).
 - Adds: logging, error handling, path validation, atomic copy,
 cleanup, status.
+
+Minimal runbook for demo:
+1) python replicant_v1.1.py --init
+2) Show status: python replicant_v1.1.py --status
+3) Allow a demo run. Remove sandbox_w/STOP and replicate:
+    rm sandbox_w/STOP
+    python replicant_v1.1.py --demo
+    python replicant_v1.1.py --status
+4) Cleanup:
+    python replicant_v1.1.py --cleanup
+    python replicant_v1.1.py --status
 """
-
-# Minimal runbook for demo:
-#
-# 1) python replicant_v1.1.py --init
-# 2) Show status: python replicant_v1.1.py --status
-# 3) Allow a demo run. Remove sandbox_w/STOP and replicate:
-#     rm sandbox_w/STOP
-#     python replicant_v1.1.py --demo
-#     python replicant_v1.1.py --status
-# 4) Cleanup:
-#     python replicant_v1.1.py --cleanup
-#     python replicant_v1.1.py --status
-
 
 import argparse, json, logging, os, shutil, sys, tempfile, time
 from pathlib import Path
