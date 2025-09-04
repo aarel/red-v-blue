@@ -59,17 +59,27 @@ Config editing: --config-edit key=value, --save-config.
 
 Enhanced README, Threat→Control tables, CHANGELOG, and references.
 
-Threat → Control Mapping
-Simulated Behavior	Red Demonstrates	Blue Control / Lesson
-Self-replication	Copies inside sandbox	File integrity monitoring (FIM)
-Polymorphism / Obfuscation	Varying checksums, junk code	Behavior analytics, YARA rules
-Simulated Spread	Replicas in mock hosts	Network segmentation, least privilege
-Payload	Drops note file	App allowlisting, anomaly alerts
-Stealth alias	Fake process name	EDR process monitoring
-Mock persistence	Startup-like marker file	Persistence detection, audit trails
-Simulated networking	Connect attempt logs	Proxy/NetFlow logging, egress controls
-Recovery	Journal cleanup	IR playbooks, audit trail
-Resource/Lock	Safe execution limits	Reliability & lab repeatability
+| Simulated Behavior         | Red Demonstrates             | Blue Control / Lesson                  |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+| Self-replication           | Copies inside sandbox        | File integrity monitoring (FIM)        |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+| Polymorphism / Obfuscation | Varying checksums, junk code | Behavior analytics, YARA rules         |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+| Simulated Spread           | Replicas in mock hosts       | Network segmentation, least privilege  |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+| Payload                    | Drops note file              | App allowlisting, anomaly alerts       |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+| Stealth alias              | Fake process name            | EDR process monitoring                 |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+| Mock persistence           | Startup-like marker file     | Persistence detection, audit trails    |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+| Simulated networking       | Connect attempt logs         | Proxy/NetFlow logging, egress controls |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+| Recovery                   | Journal cleanup              | IR playbooks, audit trail              |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+| Resource/Lock              | Safe execution limits        | Reliability & lab repeatability        |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+
 Quick Start
 # Setup environment
 python -m venv .venv && source .venv/bin/activate
