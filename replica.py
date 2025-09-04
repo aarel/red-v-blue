@@ -1,7 +1,7 @@
 import os
 import shutil
 
-# This function demonstrates a self-replicating script for educational purposes.
+# This function demonstrates worm-like behavior for educational purposes.
 # It copies the current script into a 'replicas' directory as 'worm_copy.py' to illustrate replication behavior.
 
 def replicate():
